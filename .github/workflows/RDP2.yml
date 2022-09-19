@@ -15,9 +15,8 @@ jobs:
         copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
     - name: Connect your NGROK account
-      run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
-      env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN2 }}
+      run: .\ngrok.exe authtoken 2F0O6Exc5A5a9y1XR0jphfVHDY7_3U2zePp5bGjVZrToXe5yH
+      
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
